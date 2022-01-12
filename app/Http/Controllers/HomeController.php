@@ -1,5 +1,4 @@
 <?php
-
  namespace App\Http\Controllers;
  use Illuminate\Http\Request;
 
@@ -14,9 +13,9 @@ use App\Models\Comment;
 //ُEnd  sopping cart ------------------
     public function index()
     {
-        $posts    = Post::orderBy('created_at', 'DESC')->paginate(5);
-        $comments = Comment::orderBy('created_at', 'DESC')->paginate(5);
-        $users    = User::orderBy('created_at', 'DESC')->paginate(5);
+        $posts    = Post::orderBy('created_at', 'ASC')->paginate(20);
+        $comments = Comment::orderBy('created_at', 'ASC')->paginate(5);
+        $users    = User::orderBy('created_at', 'ASC')->paginate(5);
         return view('home', [
             'posts' => $posts,
             'comments' => $comments,
@@ -25,9 +24,9 @@ use App\Models\Comment;
     }
        public function home()
     {
-        $posts    = Post::orderBy('created_at', 'DESC')->paginate(5);
-        $comments = Comment::orderBy('created_at', 'DESC')->paginate(5);
-        $users    = User::orderBy('created_at', 'DESC')->paginate(5);
+        $posts    = Post::orderBy('created_at', 'ASC')->paginate(20);
+        $comments = Comment::orderBy('created_at', 'ASC')->paginate(5);
+        $users    = User::orderBy('created_at', 'ASC')->paginate(5);
         return view('home', [
             'posts' => $posts,
             'comments' => $comments,
@@ -36,9 +35,9 @@ use App\Models\Comment;
     }
     public function dashboard()
     {
-        $posts    = Post::orderBy('created_at', 'DESC')->paginate(5);
-        $comments = Comment::orderBy('created_at', 'DESC')->paginate(5);
-        $users    = User::orderBy('created_at', 'DESC')->paginate(5);
+        $posts    = Post::orderBy('created_at', 'ASC')->paginate(20);
+        $comments = Comment::orderBy('created_at', 'ASC')->paginate(5);
+        $users    = User::orderBy('created_at', 'ASC')->paginate(5);
 
         return view('dashboard',compact( 'comments','posts', 'users'));
 
@@ -67,44 +66,6 @@ use App\Models\Comment;
          return redirect()->back() ->with('success','Comment created successfully.');
 
      }
-
-//
-//
-//     public function store_comment(Request $request)
-//     {
-//
-//
-//
-//
-//             $data =$this->validate(request(),[
-//                 'description'        =>'required',
-////                 'title'        =>'sometimes|nullable',
-////                 'footer'        =>'sometimes|nullable',
-////                 'product_id'        =>'sometimes|nullable',
-////                 'user_id'        =>'sometimes|nullable',
-////            'status_comment'        =>'required',
-////            'status_comment'=> 'required|in:1,0' ,
-////                 'status_comment'                 => 'required',
-//
-////                 'photo'                    =>'sometimes|nullable|'.v_image(),
-//             ],[
-//                 'description'                     =>trans('admin.description'),
-////                 'title'                       =>trans('admin.title'),
-////                 'product_id'                      =>trans('admin.product_id'),
-////                 'user_id'                      =>trans('admin.user_id'),
-////                 'footer'                      =>trans('admin.footer'),
-////                 'status_comment'              =>trans('admin.status'),
-////                 'photo'                       =>trans('admin.photo'),
-//             ],[
-//             ]);
-//
-////   return  dd($data);
-//             Comment::Create($data);
-//             session()->flash('success', 'success');
-////             return back();
-//
-////         }//ajax
-//     }
 
 
 
