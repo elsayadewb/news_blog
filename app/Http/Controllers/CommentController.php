@@ -42,7 +42,7 @@ class CommentController extends Controller
             'description' => 'required',
             'user_id' => 'required',
             'post_id' => 'required',
-             'photo' => 'sometimes',
+             'photo' => 'sometimes|nullable',
          ],[
         ],[
 
@@ -76,7 +76,7 @@ class CommentController extends Controller
         $request->validate([
             'title' => 'required|max:150',
             'description' => 'required',
-            'photo' => 'sometimes',
+            'photo' => 'sometimes|nullable',
             'user_id' => 'required',
             'post_id' => 'required',
         ],[

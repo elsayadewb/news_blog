@@ -41,24 +41,34 @@ class PostController extends Controller
             'title' => 'required|max:150',
             'description' => 'required',
             'user_id' => 'required',
-            'photo' => 'sometimes',
+            'photo' => 'required|image|mimes:jpeg,png,jpg,gif,svg|max:2048',
         ],[
         ],[
-
             'user_id'=>'user_id',
             'title'=>'title',
             'description'=>'description',
             'photo'=>'photo',
-
         ]);
 
-
+        if(request()->hasFile('photo')){
+         // start image properts
+            $file= request()->file('photo');
+            $name = $file->getClientOriginalName() ;
+            $ext  = $file->getClientOriginalExtension() ;
+            $size  = $file->getSize();
+            $mim  = $file->getMimeType();
+            $realpath  = $file->getRealPath();
+//            return $mim;
+        // End   image properts
+        $imageName = time().$name.'.'.$request->photo->extension();
+        $request->photo->move(public_path('uploads'), $imageName);
+        $data['photo'] ="uploads/".$imageName;
+        } //end request hasFile
 
         Post::create($data);
         return redirect()->route('posts.index')
             ->with('success','Post created successfully.');
     }
-
 
     public function show(Post $post)
     {
@@ -77,7 +87,7 @@ class PostController extends Controller
             'user_id' => 'required',
             'title' => 'required|max:150',
             'description' => 'required',
-            'photo' => 'sometimes',
+            'photo' => 'sometimes|nullable',
         ],[
         ],[
 

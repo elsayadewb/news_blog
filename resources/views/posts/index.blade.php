@@ -14,6 +14,7 @@
                         <th>No</th>
                         <th>Name</th>
                         <th>Details</th>
+                        <th>photo</th>
                         <th width="280px">Action</th>
                     </tr>
                     @foreach ($posts as $key => $post)
@@ -21,6 +22,9 @@
                             <td>{{ ++$i }}</td>
                             <td>{{ $post->title }}</td>
                             <td>{{ \Str::limit($post->description, 100) }}</td>
+                            <td>
+                                <img src="{{ asset($post->photo) }}" class="img-thumbnail" alt="..." style="width: 100px;  height: 50px">
+                            </td>
                             <td>
                                 <form action="{{ route('posts.destroy',$post->id) }}" method="POST">
                                     <a class="btn btn-info" href="{{ route('posts.show',$post->id) }}">  <i class="far fa-eye"></i></a>
