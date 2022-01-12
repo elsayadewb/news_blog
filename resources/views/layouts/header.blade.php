@@ -13,9 +13,11 @@
     }    .all_posts .card-text
     {
         font-size: 20px;
-     }  .all_posts  img:hover
+     }
+    .all_posts  img:hover
     {
      filter: brightness(0.5);
+     transition: all .7s ease;
      }
 </style>
 </head>

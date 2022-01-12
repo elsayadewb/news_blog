@@ -54,7 +54,7 @@
 
                                             </form>
                                         @else
-                                            if you want to add comment please login <a href="/login">login</a>
+                                            if you want to add comment please login <a href="{{ route('login') }}">login</a>
                                         @endauth
                                     </div>
 
