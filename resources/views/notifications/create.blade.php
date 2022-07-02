@@ -11,21 +11,50 @@
                 {{--                <x-jet-welcome />--}}
 
                 @include('message')
-                <form action="{{ route('posts.store') }}" method="POST"   enctype="multipart/form-data">
+                <form action="{{ route('notifications.store') }}" method="POST"   enctype="multipart/form-data">
                     @csrf
                     <div class="row">
+                          
+
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Title:</strong>
-                                <input type="text" name="title" class="form-control" placeholder="Enter Title">
+                                <strong>type:</strong>
+                                <input type="text" name="type" class="form-control" placeholder="Enter type">
                             </div>
-                        </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
-                                <strong>Description:</strong>
-                                <textarea class="form-control" style="height:150px" name="description" placeholder="Enter Description"></textarea>
+                                <strong>notifiable:</strong>
+                                <input type="text" name="notifiable" class="form-control" placeholder="Enter notifiable">
+                            </div>
+                            <div class="form-group">
+                                <strong>notifiable_id:</strong>
+                                <input type="text" name="notifiable_id" class="form-control" placeholder="Enter notifiable_id">
+                            </div>
+                            <div class="form-group">
+                                <strong>notifiable_type:</strong>
+                                <input type="text" name="notifiable_type" class="form-control" placeholder="Enter notifiable_type">
+                            </div>
+ 
+
+
+
+                            <div class="form-group">
+                                <strong>data:</strong>
+                                <input type="text" name="data" class="form-control" placeholder="Enter data">
+                            </div>
+                            <div class="form-group">
+                                <strong>read at:</strong>
+                                <input type="text" name="read_at" class="form-control" placeholder="Enter read_at">
+                            </div>
+                            <div class="form-group">
+                                <strong>read at:</strong>
+                                <input type="text" name="read_at" class="form-control" placeholder="Enter read_at">
+                            </div>
+                            <div class="form-group">
+                                <strong>user_id:</strong>
+                                <input type="text" name="user_id" class="form-control" placeholder="Enter user_id">
                             </div>
                         </div>
+                      
                         <div class="col-xs-12 col-sm-12 col-md-12">
                             <div class="form-group">
                                 <strong>Image:</strong>
@@ -45,6 +74,10 @@
                     </div>
                      <img id="thumbnil" style="width:20%; margin-top:10px;" src="{{ asset('defaultphoto.png') }}" alt="image"/>
                     <script>
+
+
+
+
                         function showMyImage(fileInput) {
                             var files = fileInput.files;
                             for (var i = 0; i < files.length; i++) {

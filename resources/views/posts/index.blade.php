@@ -12,6 +12,7 @@
                 <table class="table table-bordered">
                     <tr>
                         <th>No</th>
+                        <th>add by </th>
                         <th>Name</th>
                         <th>Details</th>
                         <th>photo</th>
@@ -20,7 +21,8 @@
                     @foreach ($posts as $key => $post)
                         <tr>
                             <td>{{ ++$i }}</td>
-                            <td>{{ $post->title }}</td>
+                             <td>{{ $post->add_by()->first()->name }}</td>
+                             <td>{{ $post->title }}</td>
                             <td>{{ \Str::limit($post->description, 100) }}</td>
                             <td>
                                 <img src="{{ asset($post->photo) }}" class="img-thumbnail" alt="..." style="width: 100px;  height: 50px">

@@ -3,12 +3,16 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Post extends Model
+class Notification extends Model
 {
     use HasFactory;
 
     protected $fillable = [
-        'title', 'description', 'photo','user_id'
+        'type', 'notifiable', 'photo','data','read_at','user_id','notifiable_type','notifiable_id',
+    
+        
+    
+        
     ];
 
     public function add_by()
@@ -19,4 +23,4 @@ class Post extends Model
 }
 
 
-
+ 

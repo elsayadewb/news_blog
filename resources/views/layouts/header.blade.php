@@ -19,6 +19,12 @@
      filter: brightness(0.5);
      transition: all .7s ease;
      }
+     /*=======start my  style code  */
+            .content-header {
+            padding: 1px 0.5rem;
+            }
+     /*=======start my  style code  */
+
 </style>
 </head>
 <body>

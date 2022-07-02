@@ -14,15 +14,17 @@
                     <div class="row">
                         <div class="col-md-12">
                             <div class="card -bg-gray-50  " >
-                                <div class="-card-header"
+                                <div class="-card-header">
+
                                     @include('message')
                                 </div>
                                 @foreach ($posts as $keypost => $post)
                                     <div class="card-body"  style="padding: 20px" >
                                         <h5 class="card-title">{{   $keypost.':'.  \Str::limit($post->title, 100) }}</h5>
                                         <p class="card-text">{{   $keypost.':'.  \Str::limit($post->description, 100) }}</p>
-                                          <img src="{{ asset($post->photo) }}" class="card-img-top img-thumbnail" alt="..." style="width: 100%;  height: 500px">
-                                           <br/><br/>
+                                        <img src="{{ asset($post->photo) }}" alt="..." style="width: 100%;  height: 500px">
+                                        <br/><br/>
+
                                         <div class="col-xs-12 col-sm-12 col-md-12" >
                                             @foreach ($comments as $key => $comment)
                                                 @if($comment->post_id ==  $post->id)
@@ -64,6 +66,7 @@
                             </div>
                         </div><!-- col-md-12-->
                     </div><!-- row-->
+                    {{$posts->links('vendor.pagination.bootstrap-4')}}
                 </div><!-- container-->
             </section><!--all_posts-->
         </div>

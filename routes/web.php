@@ -5,6 +5,7 @@ use App\Http\Controllers\UserController;
 use App\Http\Controllers\PostController;
 use App\Http\Controllers\CommentController;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\notificationController;
 
 
 
@@ -13,6 +14,8 @@ use App\Http\Controllers\HomeController;
 | Web Routes
 |--------------------------------------------------------------------------
 */
+ Route::get('send',"App\Http\Controllers\HomeController@sendNotification");
+ Route::resource('notifications', notificationController::class)->middleware('auth'); //
 
 
 Route::get('/home', function () {
@@ -26,6 +29,9 @@ Route::any('/store/comment',"App\Http\Controllers\HomeController@store_comment")
  Route::resource('users', UserController::class)->middleware('auth'); //
 Route::resource('posts', PostController::class)->middleware('auth'); //
 Route::resource('comments', CommentController::class)->middleware('auth'); //
+
+Route::get('/getdatalastweek ',"App\Http\Controllers\PostController@getdatalastweek");
+
 
 
 Route::middleware(['auth:sanctum', 'verified'])->get('/dashboard', function () {

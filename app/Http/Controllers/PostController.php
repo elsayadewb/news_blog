@@ -3,7 +3,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Post;
 use Illuminate\Http\Request;
-
+use Carbon \ Carbon;
 class PostController extends Controller
 {
     /**
@@ -11,6 +11,25 @@ class PostController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
+    public function getdatalastweek()
+    {
+       
+        $posts = Post::select("*")
+
+        ->whereBetween('created_at', 
+
+                [Carbon::now()->startOfWeek(), Carbon::now()->endOfWeek()]
+
+            )
+
+        ->get();
+
+
+
+dd(startOfWeek());
+
+ 
+    }
     public function index()
     {
         $posts = Post::Paginate(5);
@@ -19,22 +38,11 @@ class PostController extends Controller
             ->with('i', (request()->input('page', 1) - 1) * 5);
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
     public function create()
     {
         return view('posts.create');
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $data =  $request->validate([

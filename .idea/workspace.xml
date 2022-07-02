@@ -5,8 +5,24 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="ef889354-8e80-40f6-9b3e-9921f0b5a90e" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/errors/404.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/404.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/resources/views/errors/404.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/header.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Exceptions/Handler.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Exceptions/Handler.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/PostController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Models/Post.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Models/Post.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1641997454.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1641997956.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1641998039.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1641998560building_rest_api_in_laravel_using_senctum_authentication.png.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/uploads/1641998645logo_footer.png.png" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/comments/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/comments/index.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/dashboard.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/dashboard.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/posts/index.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/posts/index.blade.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -157,7 +173,9 @@
     </include_path>
   </component>
   <component name="ProjectId" id="23Xev6J0uYyZEYtw5FmIao8FYEv" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
@@ -166,7 +184,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/views/layouts" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/resources/errors" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -175,11 +193,11 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
-      <recent name="F:\xampp\htdocs\mo4\2022\resources\views\layouts" />
+      <recent name="F:\xampp\htdocs\mo4\2022\resources\errors" />
       <recent name="F:\xampp\htdocs\mo4\2022\resources\views" />
+      <recent name="F:\xampp\htdocs\mo4\2022\resources\views\layouts" />
       <recent name="F:\xampp\htdocs\mo4\2022\database\migrations" />
       <recent name="F:\xampp\htdocs\mo4\2022\app\Http\Controllers" />
-      <recent name="F:\xampp\htdocs\mo4\2022\app\Models" />
     </key>
   </component>
   <component name="RunManager">
@@ -197,12 +215,30 @@
       <option name="presentableId" value="Default" />
       <updated>1641885088056</updated>
       <workItem from="1641885089591" duration="8245000" />
-      <workItem from="1641894460644" duration="65742000" />
+      <workItem from="1641894460644" duration="69760000" />
+      <workItem from="1642049791865" duration="692000" />
+      <workItem from="1642732326119" duration="195000" />
+      <workItem from="1642732524865" duration="1446000" />
+      <workItem from="1642880740537" duration="27000" />
+      <workItem from="1642918650587" duration="3205000" />
+      <workItem from="1642978012478" duration="284000" />
+      <workItem from="1642978327314" duration="3000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="Vcs.Log.Tabs.Properties">
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State />
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

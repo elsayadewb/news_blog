@@ -5,10 +5,38 @@
 use App\Models\Comment;
  use App\Models\User;
  use App\Models\Post;
-
+  use Notification;
+ use App\Notifications\MyFirstNotification;
 //-----------------End   Apypal Class
  class HomeController extends Controller
  {
+
+
+
+
+// --------------------------------------
+public function sendNotification()
+    {
+        $user = User::first();
+  
+        $details = [
+            'greeting' => 'Hi Notification',
+            'body' => 'This is my first notification from elsayadweb',
+            'thanks' => 'Thank you for using elsayadweb !',
+            'actionText' => 'View My Site',
+            'actionURL' => url('/'),
+            'order_id' => 101
+        ];
+  
+        Notification::send($user, new MyFirstNotification($details));
+   
+        dd('done');
+    }
+// --------------------------------------
+
+
+
+
 
 //ُEnd  sopping cart ------------------
     public function index()
@@ -66,8 +94,6 @@ use App\Models\Comment;
          return redirect()->back() ->with('success','Comment created successfully.');
 
      }
-
-
 
 
 
